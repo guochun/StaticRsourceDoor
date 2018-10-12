@@ -1,0 +1,21 @@
+root = true
+
+[*]
+
+#文件编码格格式
+charset = utf-8
+
+#缩进的样式
+indent_style = space
+#缩进的大小
+indent_size = 4
+
+#一行结尾的方式
+end_of_line = lf
+#最后一行是否为空行
+insert_final_newline = true
+#是否去除最后的空格
+trim_trailing_whitespace = true
+
+[*.json]
+indent_size = 4

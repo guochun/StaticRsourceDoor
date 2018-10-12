@@ -1,0 +1,36 @@
+{
+  "name": "staticrsourcedoor",
+  "version": "1.0.0",
+  "description": "a simply static web server",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guochun/StaticRsourceDoor.git"
+  },
+  "keywords": [
+    "static",
+    "web",
+    "server"
+  ],
+  "author": "purcy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guochun/StaticRsourceDoor/issues"
+  },
+  "homepage": "https://github.com/guochun/StaticRsourceDoor#readme",
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "pre-commit": "^1.2.2"
+  }
+}
