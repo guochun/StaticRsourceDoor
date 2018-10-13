@@ -2,7 +2,10 @@
   "name": "staticrsourcedoor",
   "version": "1.0.0",
   "description": "a simply static web server",
-  "main": "build/index.js",
+  "main": "src/app.js",
+  "bin": {
+        "simplystaticserver": "bin/simplystaticserver"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
@@ -28,9 +31,15 @@
   },
   "homepage": "https://github.com/guochun/StaticRsourceDoor#readme",
   "devDependencies": {
-    "eslint": "^5.6.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "handlebars": "^4.0.12",
+    "yargs": "^12.0.2"
   }
 }
