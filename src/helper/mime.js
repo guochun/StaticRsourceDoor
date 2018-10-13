@@ -18,7 +18,7 @@ const mimeTypes = {
     'wma': 'audio/x-ms-wma',
     'wmv': 'video/x-ms-wmv',
     'xml': 'text/xml'
-}
+};
 
 module.exports = (filePath) => {
     let extension = path.extname(filePath)

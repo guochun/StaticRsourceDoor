@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const promisify = require('util').promisify;
 const Handebars = require('handlebars');
 const stat = promisify(fs.stat);
@@ -42,7 +42,7 @@ module.exports = async function (req, res, filePath,conf) {
         }
         //判断为文件夹
         else if (stats.isDirectory()) {
-            const files = await readdir(filePath)
+            const files = await readdir(filePath);
             res.statusCode = 200;
             res.setHeader('Conent-Type', 'text/html');
             const dir = path.relative(conf.root, filePath);
@@ -52,15 +52,15 @@ module.exports = async function (req, res, filePath,conf) {
                     return {
                         file: file,
                         icon: mime(file)
-                    }
+                    };
                 }),
                 dir: dir ? `/${dir}` : '',
-            }
+            };
             res.end(template(data));
         }
 
     } catch (ex) {
-        console.info(ex)
+        console.info(ex);
         res.statusCode = 404;
         res.setHeader('Conent-Type', 'text/plain');
         res.end(`${filePath} is not dirctory or file`);
